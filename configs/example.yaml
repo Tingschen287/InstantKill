@@ -1,0 +1,105 @@
+# InstantKill 平台配置示例
+# 使用 YAML 格式定义抢票平台的配置
+
+version: "1.0"
+
+platforms:
+  - name: "示例平台 - 演唱会抢票"
+    url: "https://example.com/concert/tickets"
+    loginRequired: true
+
+    # 元素选择器配置
+    selectors:
+      # 抢票按钮选择器（支持多个）
+      button:
+        - "#buy-button"
+        - ".ticket-buy-btn"
+        - "[data-action='buy-ticket']"
+
+      # 输入框选择器（用于填写订单）
+      input:
+        name: "#customer-name"
+        phone: "#customer-phone"
+        id_card: "#customer-idcard"
+
+      # 成功检测选择器
+      success:
+        - ".order-success"
+        - "[data-status='success']"
+        - ".confirmation-number"
+
+      # 失败检测选择器
+      failure:
+        - ".error-message"
+        - "[data-status='failed']"
+
+    # 表单数据（如果需要自动填写）
+    formData:
+      inputs:
+        name: "张三"
+        phone: "13800138000"
+        id_card: "110101199001011234"
+
+    # 时间配置
+    timing:
+      # 开始抢票时间
+      startTime: "2025-04-01 10:00:00"
+      # 刷新间隔（毫秒）
+      refreshInterval: 500
+
+  - name: "示例平台 - 课程报名"
+    url: "https://example.com/course/register"
+    loginRequired: false
+
+    selectors:
+      button:
+        - ".register-btn"
+        - "#submit-registration"
+
+      input:
+        name: "input[name='name']"
+        email: "input[name='email']"
+
+      success:
+        - ".success-message"
+
+    formData:
+      inputs:
+        name: "李四"
+        email: "lisi@example.com"
+
+    timing:
+      startTime: "2025-04-02 09:00:00"
+      refreshInterval: 1000
+
+# 全局配置
+global:
+  # 是否使用无头模式（false = 显示浏览器窗口）
+  headless: false
+
+  # 是否使用人类化操作（模拟人类行为）
+  humanMode: true
+
+  # 最大重试次数
+  maxRetries: 5
+
+  # 默认超时时间（毫秒）
+  defaultTimeout: 30000
+
+  # 是否启用日志
+  enableLogging: true
+
+  # 是否在关键操作时截图
+  enableScreenshot: true
+
+  # 截图保存路径
+  screenshotPath: "./screenshots"
+
+  # 成功通知
+  notifications:
+    # 终端通知
+    terminal: true
+    # 声音提示
+    sound: true
+    # Webhook 通知（可选）
+    webhookUrl: ""

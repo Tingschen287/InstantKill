@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Screenshots (runtime generated)
+screenshots/
+
+# Config files with personal data
+configs/local.yaml
+configs/private.yaml
+
+# Test coverage
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
