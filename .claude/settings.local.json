@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "Bash(git init:*)",
+      "Bash(chmod:*)",
+      "Bash(npm install:*)",
+      "Bash(npx playwright:*)",
+      "Bash(git add:*)",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot"
+    ]
+  }
+}

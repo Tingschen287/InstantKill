@@ -1,7 +1,7 @@
 {
   "project": "InstantKill - 智能抢票系统",
   "version": "0.1.0",
-  "lastUpdated": "2026-03-29T14:00:00+08:00",
+  "lastUpdated": "2026-03-29T14:30:00+08:00",
   "features": [
     {
       "id": "A1",
@@ -32,13 +32,27 @@
       "category": "核心引擎模块",
       "description": "反检测机制 - 随机延迟、鼠标轨迹模拟、人类化输入模式",
       "steps": [
-        "实现随机延迟函数（符合人类操作时间分布）",
-        "实现鼠标轨迹模拟（贝塞尔曲线路径）",
-        "实现人类化打字速度（随机停顿、回退重打）",
-        "实现浏览器指纹随机化",
-        "实现 Webdriver 特征隐藏"
+        "[PASS] 实现随机延迟函数（符合人类操作时间分布）",
+        "[PASS] 实现鼠标轨迹模拟（贝塞尔曲线路径）",
+        "[PASS] 实现人类化打字速度（随机停顿、回退重打）",
+        "[PASS] 实现浏览器指纹随机化",
+        "[PASS] 实现 Webdriver 特征隐藏"
       ],
-      "passes": false
+      "passes": true,
+      "testedAt": "2026-03-29",
+      "testResult": "通过 bot.sannysoft.com 反检测测试",
+      "additionalFeatures": [
+        "多浏览器 User-Agent 池（Chrome/Safari/Firefox/Edge）",
+        "Canvas 指纹随机化",
+        "WebGL 指纹伪装",
+        "Navigator 属性伪装",
+        "鼠标滚动模拟",
+        "页面浏览行为模拟",
+        "点击位置随机偏移",
+        "打字错误模拟（相邻键误触）",
+        "指数分布延迟",
+        "隐身上下文创建"
+      ]
     },
     {
       "id": "A3",
