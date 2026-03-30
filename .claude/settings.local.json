@@ -9,7 +9,10 @@
       "Bash(npx playwright:*)",
       "Bash(git add:*)",
       "mcp__plugin_playwright_playwright__browser_take_screenshot",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git remote:*)",
+      "Bash(git branch:*)",
+      "Bash(git push:*)"
     ]
   }
 }
