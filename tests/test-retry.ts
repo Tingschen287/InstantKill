@@ -3,8 +3,8 @@
  * 用于验证 A4: 自动重试机制
  */
 
-import { RetryManager, ErrorClassifier, DelayCalculator, quickRetry, retryUntilSuccess, retryWithCondition } from './src/engine/retry.js';
-import { createLogger } from './src/utils/logger.js';
+import { RetryManager, ErrorClassifier, DelayCalculator, quickRetry, retryUntilSuccess, retryWithCondition } from '../src/engine/retry.js';
+import { createLogger } from '../src/utils/logger.js';
 
 const logger = createLogger('A4-Test');
 

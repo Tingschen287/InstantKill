@@ -3,8 +3,8 @@
  * 用于验证 B2: 按钮状态监听 和 B3: 快速点击
  */
 
-import { ButtonStateMonitor, ClickStrategy, quickClick, waitAndClick, batchClick } from './src/strategies/click.js';
-import { createLogger } from './src/utils/logger.js';
+import { ButtonStateMonitor, ClickStrategy, quickClick, waitAndClick, batchClick } from '../src/strategies/click.js';
+import { createLogger } from '../src/utils/logger.js';
 
 const logger = createLogger('B2-B3-Test');
 

@@ -1,27 +1,48 @@
 {
   "name": "instantkill",
   "version": "0.1.0",
-  "description": "智能抢票系统 - 仿人操作的高效抢���/抢套餐工具",
+  "description": "智能抢票系统 - 仿人操作的高效抢票/抢套餐工具",
   "main": "dist/index.js",
   "type": "module",
+  "bin": {
+    "instantkill": "./dist/cli.js"
+  },
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "test": "echo \"Tests to be implemented\" && exit 0"
+    "cli": "tsx src/cli.ts",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:browser": "tsx tests/test-browser.ts",
+    "test:anti-detect": "tsx tests/test-anti-detect.ts",
+    "test:monitor": "tsx tests/test-monitor.ts",
+    "test:retry": "tsx tests/test-retry.ts",
+    "test:refresh": "tsx tests/test-refresh.ts",
+    "test:click": "tsx tests/test-click.ts",
+    "test:fill": "tsx tests/test-fill.ts",
+    "test:adapter": "tsx tests/test-adapter.ts",
+    "test:all": "npm run test:browser && npm run test:anti-detect && npm run test:monitor && npm run test:retry && npm run test:refresh && npm run test:click && npm run test:fill && npm run test:adapter"
   },
   "keywords": [
     "ticket",
     "grab",
     "automation",
-    "playwright"
+    "playwright",
+    "cli"
   ],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "commander": "^12.1.0",
+    "inquirer": "^9.2.23",
+    "chalk": "^5.3.0",
+    "ora": "^8.0.1",
+    "cli-progress": "^3.12.0",
     "playwright": "^1.48.0"
   },
   "devDependencies": {
+    "@types/cli-progress": "^3.11.5",
+    "@types/inquirer": "^9.0.7",
     "@types/node": "^22.0.0",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0"

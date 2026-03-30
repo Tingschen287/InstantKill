@@ -4,8 +4,8 @@
  */
 
 import { chromium, Browser, BrowserContext, Page } from 'playwright';
-import { AntiDetect } from './src/engine/anti-detect.js';
-import { createLogger } from './src/utils/logger.js';
+import { AntiDetect } from '../src/engine/anti-detect.js';
+import { createLogger } from '../src/utils/logger.js';
 
 const logger = createLogger('A2-Test');
 

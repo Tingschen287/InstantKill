@@ -190,7 +190,7 @@ export class FormFieldRecognizer {
       const required = await element.getAttribute('required');
 
       // 生成选择器
-      const selector = id ? `#${id}` : name ? `[name="${name}"]`] : null;
+      const selector = id ? `#${id}` : name ? `[name="${name}"]` : null;
       if (!selector) return null;
 
       // 尝试获取标签
@@ -219,7 +219,7 @@ export class FormFieldRecognizer {
       const name = await element.getAttribute('name');
       const required = await element.getAttribute('required');
 
-      const selector = id ? `#${id}` : name ? `[name="${name}"]`] : null;
+      const selector = id ? `#${id}` : name ? `[name="${name}"]` : null;
       if (!selector) return null;
 
       return {
@@ -242,7 +242,7 @@ export class FormFieldRecognizer {
       const name = await element.getAttribute('name');
       const required = await element.getAttribute('required');
 
-      const selector = id ? `#${id}` : name ? `[name="${name}"]`] : null;
+      const selector = id ? `#${id}` : name ? `[name="${name}"]` : null;
       if (!selector) return null;
 
       return {

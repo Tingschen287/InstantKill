@@ -3,8 +3,8 @@
  * 用于验证 A1: 浏览器自动化基础
  */
 
-import { BrowserEngine } from './src/engine/browser.js';
-import { createLogger } from './src/utils/logger.js';
+import { BrowserEngine } from '../src/engine/browser.js';
+import { createLogger } from '../src/utils/logger.js';
 
 const logger = createLogger('A1-Test');
 

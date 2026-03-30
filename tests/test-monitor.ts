@@ -4,8 +4,8 @@
  */
 
 import { chromium, Browser, Page } from 'playwright';
-import { PageMonitor } from './src/engine/monitor.js';
-import { createLogger } from './src/utils/logger.js';
+import { PageMonitor } from '../src/engine/monitor.js';
+import { createLogger } from '../src/utils/logger.js';
 
 const logger = createLogger('A3-Test');
 

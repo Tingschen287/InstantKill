@@ -303,6 +303,8 @@ export class ConfigLoader {
     // 验证平台配置
     if (!config.platforms || !Array.isArray(config.platforms)) {
       errors.push('缺少 platforms 数组');
+    } else if (config.platforms.length === 0) {
+      errors.push('platforms 数组为空，至少需要一个平台配置');
     } else {
       for (let i = 0; i < config.platforms.length; i++) {
         const platform = config.platforms[i];

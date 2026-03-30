@@ -3,8 +3,8 @@
  * 用于验证 B4: 表单自动填充
  */
 
-import { FillStrategy, FormFieldRecognizer, UserConfigManager, FormData, FormFieldConfig, quickFillForm, smartFillForm, emergencyFillForm } from './src/strategies/fill.js';
-import { createLogger } from './src/utils/logger.js';
+import { FillStrategy, FormFieldRecognizer, UserConfigManager, FormData, FormFieldConfig, quickFillForm, smartFillForm, emergencyFillForm } from '../src/strategies/fill.js';
+import { createLogger } from '../src/utils/logger.js';
 
 const logger = createLogger('B4-Test');
 
